@@ -42,17 +42,22 @@ def repeat_all_messages(message):
         bot.send_message(message.chat.id, messages.BUY2, parse_mode='HTML')
     elif message.text == '/buy3':
         bot.send_message(message.chat.id, messages.BUY3, parse_mode='HTML')
+    elif message.text == '/buy6':
+        bot.send_message(message.chat.id, messages.BUY6, parse_mode='HTML')
 
     elif message.text == '/buy2_1':
         bot.send_message(message.chat.id, messages.BUY2_1 + mes, parse_mode='HTML')
     elif message.text == '/buy3_1':
         bot.send_message(message.chat.id, messages.BUY3_1 + mes, parse_mode='HTML')
-    elif message.text == '/buy3_2':
-        bot.send_message(message.chat.id, messages.BUY3_2 + mes, parse_mode='HTML')
+    elif message.text == '/buy6_1':
+        bot.send_message(message.chat.id, messages.BUY6_1 + mes, parse_mode='HTML')
 
     elif message.text == '/check':
         time.sleep(1)
         bot.send_message(message.chat.id, messages.CHECK, parse_mode='HTML')
+
+    else:
+        bot.send_message(message.chat.id, messages.START, parse_mode='HTML')
 
     if message.from_user.username == None:
         bot.send_message(771112471, message.text + '    *****    ' +
